@@ -28,10 +28,24 @@ return <div className="crypto-card">
         </div>
 
 
+ <div className="crypto-stats">
+          <div className="stat">
+            <span className="stat-label">Market Cap</span>
+            <span className="stat-value">
+              ${formatMarketCap(crypto.market_cap)}
+            </span>
+          </div>
+
+          <div className="stat">
+            <span className="stat-label">Volume</span>
+            <span className="stat-value">
+              ${formatMarketCap(crypto.total_volume)}
+            </span>
+          </div>
+        </div>
 
 
 
-        
 
 </div>
 }
