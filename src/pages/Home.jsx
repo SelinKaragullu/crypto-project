@@ -1,17 +1,17 @@
 import React from 'react'
 import { fetchCryptos } from '../api/coinGecko'
-
+import { CryptoCard } from "../components/CryptoCard"
 
 
 
 export const Home = () => {
 
-  const [cryptoList, setCryptoList] = useState([]);
-  const [filteredList, setFilteredList] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [viewMode, setViewMode] = useState("grid");
-  const [sortBy, setSortBy] = useState("market_cap_rank");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [cryptoList, setCryptoList] = React.useState([]);
+  const [filteredList, setFilteredList] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [viewMode, setViewMode] = React.useState("grid");
+  const [sortBy, setSortBy] = React.useState("market_cap_rank");
+  const [searchQuery, setSearchQuery] = React.useState("");
 
  React.useEffect(() => {
     filterAndSort()
@@ -38,12 +38,14 @@ export const Home = () => {
   }, [])
 
 
-  const filterAndSort = () => {
-let filtered = cryptoList.filter((crypto)=>{
-  crypto.name.toLowerCase().includes(searchQuery)
-  crypto.symbol.toLowerCase().includes(searchQuery)
-})
- filtered.sort((a, b) => {
+ const filterAndSort = () => {
+    let filtered = cryptoList.filter(
+      (crypto) =>
+        crypto.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        crypto.symbol.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    filtered.sort((a, b) => {
       switch (sortBy) {
         case "name":
           return a.name.localeCompare(b.name);
@@ -57,11 +59,13 @@ let filtered = cryptoList.filter((crypto)=>{
           return a.market_cap - b.market_cap;
         default:
           return a.market_cap_rank - b.market_cap_rank;
-  }
-})
+      }
+    });
 
-setFilteredList(filtered)
+    setFilteredList(filtered);
   }
+
+
 
   return (
     <div className="app">

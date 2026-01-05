@@ -1,10 +1,12 @@
 
-import { formatPrice, formatMarketCap } from "../utils/formatter";
-
+import { formatPrice, formatMarketCap } from "../utils/formatter"
+import { Link } from "react-router"
 
 export const CryptoCard = ({crypto})=> {
-  <Link to={`/coin/${crypto.id}`} style={{textDecoration: "none"}}>
-return <div className="crypto-card">
+  
+return (
+<Link to={`/coin/${crypto.id}`} style={{textDecoration: "none"}}>
+<div className="crypto-card">
       <div className="crypto-header">
           <div className="crypto-info">
             <img src={crypto.image} alt={crypto.name} />
@@ -46,4 +48,4 @@ return <div className="crypto-card">
         </div>
 </div>
 </Link>
-}
+)}
