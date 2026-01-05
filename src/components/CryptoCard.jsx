@@ -3,6 +3,7 @@ import { formatPrice, formatMarketCap } from "../utils/formatter";
 
 
 export const CryptoCard = ({crypto})=> {
+  <Link to={`/coin/${crypto.id}`} style={{textDecoration: "none"}}>
 return <div className="crypto-card">
       <div className="crypto-header">
           <div className="crypto-info">
@@ -43,9 +44,6 @@ return <div className="crypto-card">
             </span>
           </div>
         </div>
-
-
-
-
 </div>
+</Link>
 }
