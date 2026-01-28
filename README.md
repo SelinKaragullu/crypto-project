@@ -1,16 +1,39 @@
-# React + Vite
+# 🪙 React Crypto Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time cryptocurrency dashboard that tracks market prices and trends. Users can view top cryptocurrencies, search for specific coins, and see live price updates.
 
-Currently, two official plugins are available:
+[📈 **Live Demo**](https://crypto-projectt.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Live Market Data:** Fetches real-time data for cryptocurrencies (price, market cap, volume).
+* **Search Functionality:** dynamic search bar to filter coins by name or symbol instanty.
+* **Visual Price Indicators:** Color-coded changes (Green for profit, Red for loss) to visualize market trends easily.
+* **Responsive Layout:** Optimized table/grid view for both mobile and desktop screens.
+* **Loading States:** Smooth loading indicators while data is being fetched from the API.
 
-## Expanding the ESLint configuration
+## 🛠 Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **React** (Hooks: `useState`, `useEffect`)
+* **CoinGecko API** (For fetching cryptocurrency data)
+* **JavaScript** (ES6+)
+* **CSS3** (Custom styling)
+
+
+## 💻 Installation
+
+To run this project locally:
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/YOUR_USERNAME/crypto-tracker.git](https://github.com/YOUR_USERNAME/crypto-tracker.git)
+
+# 2. Navigate to the project directory
+cd crypto-tracker
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the application
+npm start
